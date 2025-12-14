@@ -34,10 +34,12 @@
         align-items: center;
 
         .nav {
+            max-width: 815px;
+            width: 100%;
 
             .nav__list {
                 display: flex;
-                column-gap: 62px;
+                justify-content: space-between;
                 flex-wrap: wrap;
 
                 .nav__link {
@@ -46,12 +48,13 @@
                     line-height: 160%;
                     color: $gray-600;
                     position: relative;
+                    padding: 10px 20px;
 
                     &::after {
                         content: attr(data-total-num);
                         position: absolute;
-                        top: -5px;
-                        right: -12px;
+                        top: 5px;
+                        right: 10px;
                         font-size: 10px;
                         font-weight: 900;
                         line-height: 150%;
@@ -59,8 +62,7 @@
                     }
 
                     &--active {
-                        padding: 10px 20px;
-                        border: 1px solid $activeMenuItem;
+                        outline: 1px solid $activeMenuItem;
                         border-radius: 4px;
                         color: $activeMenuItem;
 
